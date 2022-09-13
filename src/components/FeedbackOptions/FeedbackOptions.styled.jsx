@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-console.log(styled);
+
 export const Button = styled.button`
   text-decoration: none;
   border: none;

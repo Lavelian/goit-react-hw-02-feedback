@@ -1,4 +1,5 @@
 import { Box } from './Statistics.styled';
+import PropTypes from 'prop-types';
 const Statictics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <Box>
@@ -9,6 +10,14 @@ const Statictics = ({ good, neutral, bad, total, positivePercentage }) => {
       <p>Positive Percentage:{positivePercentage}%</p>
     </Box>
   );
+};
+
+Statictics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.string,
 };
 
 export default Statictics;

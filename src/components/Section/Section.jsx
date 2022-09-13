@@ -1,6 +1,7 @@
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statictics from 'components/Statistics';
 import Notification from 'components/Notification';
+import PropTypes from 'prop-types';
 import { Title } from './Title.styled';
 
 const countTotalFeedback = ({ good, neutral, bad }) => good + neutral + bad;
@@ -25,5 +26,19 @@ const Section = ({ title, onLeaveFeedback, options }) => (
     )}
   </>
 );
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  options: PropTypes.shape({
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+  }).isRequired,
+};
+
+// optionalObjectWithShape: PropTypes.shape({
+//     good: PropTypes.string,
+//   neutral: PropTypes.number,
+//     bad:PropTypes.number
+//   }),
 
 export default Section;

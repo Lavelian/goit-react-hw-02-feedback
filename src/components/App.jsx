@@ -1,5 +1,4 @@
 import { Component } from 'react';
-
 import Section from './Section/';
 import Container from './Container/Container.styled';
 

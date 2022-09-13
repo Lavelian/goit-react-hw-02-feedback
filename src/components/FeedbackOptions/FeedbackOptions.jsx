@@ -1,4 +1,5 @@
 import { Button } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const keys = Object.keys(options);
 
@@ -30,5 +31,12 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       </Button>
     </div>
   );
+};
+FeedbackOptions.propTypes = {
+  options: PropTypes.shape({
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+  }).isRequired,
 };
 export default FeedbackOptions;
