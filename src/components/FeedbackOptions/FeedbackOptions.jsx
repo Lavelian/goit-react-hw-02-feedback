@@ -6,30 +6,17 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
   return (
     <ContainerButton>
-      <Button
-        type="button"
-        onClick={() => {
-          onLeaveFeedback(keys[0]);
-        }}
-      >
-        Good
-      </Button>
-      <Button
-        type="button"
-        onClick={() => {
-          onLeaveFeedback(keys[1]);
-        }}
-      >
-        Neutral
-      </Button>
-      <Button
-        type="button"
-        onClick={() => {
-          onLeaveFeedback(keys[2]);
-        }}
-      >
-        Bad
-      </Button>
+      {keys.map((key, index) => (
+        <Button
+          key={index}
+          type="button"
+          onClick={() => {
+            onLeaveFeedback(key);
+          }}
+        >
+          {key}
+        </Button>
+      ))}
     </ContainerButton>
   );
 };
