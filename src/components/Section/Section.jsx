@@ -35,10 +35,4 @@ Section.propTypes = {
   }).isRequired,
 };
 
-// optionalObjectWithShape: PropTypes.shape({
-//     good: PropTypes.string,
-//   neutral: PropTypes.number,
-//     bad:PropTypes.number
-//   }),
-
 export default Section;
