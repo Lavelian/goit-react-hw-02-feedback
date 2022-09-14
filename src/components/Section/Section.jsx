@@ -19,7 +19,7 @@ const Section = ({ title, onLeaveFeedback, options }) => (
         neutral={options.neutral}
         bad={options.bad}
         total={countTotalFeedback(options)}
-        positivePercentage={countPositiveFeedbackPercentage(options).toFixed(2)}
+        positivePercentage={countPositiveFeedbackPercentage(options).toFixed(0)}
       />
     ) : (
       <Notification message="There is no feedback" />
