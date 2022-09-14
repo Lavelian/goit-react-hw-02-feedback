@@ -11,9 +11,8 @@ const countPositiveFeedbackPercentage = ({ good, bad }) => {
 const Section = ({ title, onLeaveFeedback, options }) => (
   <>
     <Title>{title}</Title>
-
     <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
-    {options.good || options.neutral || options.bad > 0 ? (
+    {countTotalFeedback(options) > 0 ? (
       <Statictics
         good={options.good}
         neutral={options.neutral}
