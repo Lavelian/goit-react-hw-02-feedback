@@ -2,24 +2,30 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   text-decoration: none;
-  border: none;
   display: inline-block;
-  color: white;
-  padding: 20px 30px;
-  margin: 10px 20px;
-  border-radius: 10px;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+
   font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  background-image: linear-gradient(
-    to right,
-    #9eefe1 0%,
-    #4830f0 51%,
-    #9eefe1 100%
-  );
-  background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: 0.5s;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  :hover,
+  :focus {
+    background: #2ee59d;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
 `;
 
 export const ContainerButton = styled.div`
